@@ -26,7 +26,8 @@ To display the FAQs, use the `[faq]` shortcode in your WordPress editor or theme
 - `answer2`: The answer for the second FAQ.
 - `question3`: The question for the third FAQ.
 - `answer3`: The answer for the third FAQ.
-- `link`: The URL of product-related blogs.
+- `link`: The URL for the heading.
+- `title`: The text for the URL above
 
 You can add the shortcode to any post, page, or widget area on your website.
 
