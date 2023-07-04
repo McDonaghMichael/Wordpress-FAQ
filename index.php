@@ -19,14 +19,15 @@ function faq_shortcode($atts) {
         'question3' => '',
         'answer3' => '',
         'link' => '',
+        'title' => '',
     ), $atts);
     
     // Construct the HTML output
     $output = '<style>' . get_option('faq_css', '') . '</style>';
     $output .= '<div class="faq-wrapper">';
     $output .= '<h3 class="faq-title">FAQ</h3>';
-    if (!empty($atts['link'])) {
-        $output .= '<h4 class="faq-link"><a target="_blank" href="' . esc_url($atts['link']) . '" rel="noopener">View Product Related Blogs</a></h4>';
+    if (!empty($atts['link']) && !empty($atts['title'])) {
+        $output .= '<h4 class="faq-link"><a target="_blank" href="' . esc_url($atts['link']) . '" rel="noopener">' . $atts['title'] . '</a></h4>';
     }
     
     if (!empty($atts['question1']) && !empty($atts['answer1'])) {
